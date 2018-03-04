@@ -4,6 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import SimpleConfig from './components/Config/SimpleConfig';
 
 import Home from './components/05_pages/Home/Home';
 import Permissions from './components/05_pages/Permissions/Permissions';
@@ -25,6 +26,7 @@ class NoMatch extends Component {
 // @todo Share this with Drupal
 const routes = {
   '/admin/people/permissions': Permissions,
+  '/admin/config/system/site-information': () => (<SimpleConfig name="system.site" onSubmit={console.log} />),
 };
 
 class App extends Component {
@@ -40,6 +42,7 @@ class App extends Component {
             <li><Link to="/admin/people/permissions">Permissions</Link></li>
             <li><Link to="/admin/appearance">Appearance</Link></li>
             <li><Link to="/node/add">Content</Link></li>
+            <li><Link to="/admin/config/system/site-information">System Information</Link></li>
           </ul>
 
           <hr />
