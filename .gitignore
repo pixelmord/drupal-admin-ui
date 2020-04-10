@@ -1,23 +1,27 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-
-# testing
-/coverage
-/reports
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
+node_modules
+npm-debug.log
+yarn-error.log
 .idea
-.env.development.local
-.env.test.local
-.env.production.local
-
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.env.local
+.env
+reports
+/packages/components/build
+
+# Demo install
+# Also update ./docker/drupal/setup.sh if anything additional is added here.
+demo/composer.json
+demo/composer.lock
+demo/config
+demo/vendor/
+demo/docroot/.ht.router.php
+demo/docroot/core/
+demo/docroot/modules/
+demo/docroot/sites/simpletest
+demo/docroot/sites/default/files/
+demo/docroot/sites/default/settings.php
+demo/docroot/sites/default/services.yml
+demo/docroot/vfancy
